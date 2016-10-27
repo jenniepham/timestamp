@@ -3,8 +3,6 @@ var app = express();
 
 
 
-
-
 function getDate(date){
       
 var unix = new Date(date*1000);
@@ -59,6 +57,6 @@ app.get("/", function(request, response){
     
 })
 
-app.listen(app.get('port'), function(){
-    console.log("listening on port" + app.get('port'));
+app.listen(process.env.PORT , function(){
+    console.log("listening on port" + process.env.PORT );
 });
