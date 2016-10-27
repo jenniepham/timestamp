@@ -59,6 +59,6 @@ app.get("/", function(request, response){
     
 })
 
-app.listen(8080, function(){
-    console.log("listening on port 8080");
+app.listen(app.get('port'), function(){
+    console.log("listening on port" + app.get('port'));
 });
